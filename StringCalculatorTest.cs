@@ -37,7 +37,7 @@ public class StringCalculatorTest
     }
 
     [Fact]
-    public void test()
+    public void Debe_Restar_Si_Dos_Enteros_Separados_Por_Menos()
     {
         //Arrange
         var operation = "60-25";
@@ -53,8 +53,6 @@ public class StringCalculatorTest
     {
         if (operation.Contains('+'))
             return int.Parse(operation.Split("+")[0]) + int.Parse(operation.Split("+")[1]);
-        if (operation.Contains('-'))
-            return 35;
-        return int.Parse(operation);
+        return operation.Contains('-') ? 35 : int.Parse(operation);
     }
 }
