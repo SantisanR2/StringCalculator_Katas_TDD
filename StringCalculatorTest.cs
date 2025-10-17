@@ -18,8 +18,8 @@ public class StringCalculatorTest
 
     }
 
-    private object calculate(string stringInteger)
+    private int calculate(string stringInteger)
     {
-        throw new NotImplementedException();
+        return 5;
     }
 }
