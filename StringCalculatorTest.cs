@@ -70,6 +70,8 @@ public class StringCalculatorTest
         operation = operation.Replace(" ", "");
         if (operation.Contains('+'))
             return int.Parse(operation.Split("+")[0]) + int.Parse(operation.Split("+")[1]);
-        return operation.Contains('-') ? 35 : int.Parse(operation);
+        if (operation.Contains('-'))
+            return int.Parse(operation.Split("-")[0]) - int.Parse(operation.Split("-")[1]);
+        return int.Parse(operation);
     }
 }
