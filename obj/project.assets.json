@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net9.0": {
+      "AwesomeAssertions/9.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/AwesomeAssertions.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/AwesomeAssertions.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "coverlet.collector/6.0.2": {
         "type": "package",
         "build": {
@@ -415,6 +428,34 @@
     }
   },
   "libraries": {
+    "AwesomeAssertions/9.2.1": {
+      "sha512": "lbwhyQNXxxEGx4oCbFqNfFy2DsywsvNhN6qoOjY4wwhMgI2L9+YrxjyF/M0io99yrvWV1Cjj12LP2QGcC43Uhw==",
+      "type": "package",
+      "path": "awesomeassertions/9.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "AwesomeAssertions.png",
+        "README.md",
+        "awesomeassertions.9.2.1.nupkg.sha512",
+        "awesomeassertions.nuspec",
+        "lib/net47/AwesomeAssertions.dll",
+        "lib/net47/AwesomeAssertions.pdb",
+        "lib/net47/AwesomeAssertions.xml",
+        "lib/net6.0/AwesomeAssertions.dll",
+        "lib/net6.0/AwesomeAssertions.pdb",
+        "lib/net6.0/AwesomeAssertions.xml",
+        "lib/net8.0/AwesomeAssertions.dll",
+        "lib/net8.0/AwesomeAssertions.pdb",
+        "lib/net8.0/AwesomeAssertions.xml",
+        "lib/netstandard2.0/AwesomeAssertions.dll",
+        "lib/netstandard2.0/AwesomeAssertions.pdb",
+        "lib/netstandard2.0/AwesomeAssertions.xml",
+        "lib/netstandard2.1/AwesomeAssertions.dll",
+        "lib/netstandard2.1/AwesomeAssertions.pdb",
+        "lib/netstandard2.1/AwesomeAssertions.xml"
+      ]
+    },
     "coverlet.collector/6.0.2": {
       "sha512": "bJShQ6uWRTQ100ZeyiMqcFlhP7WJ+bCuabUs885dJiBEzMsJMSFr7BOyeCw4rgvQokteGi5rKQTlkhfQPUXg2A==",
       "type": "package",
@@ -936,6 +977,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "AwesomeAssertions >= 9.2.1",
       "Microsoft.NET.Test.Sdk >= 17.11.1",
       "coverlet.collector >= 6.0.2",
       "xunit >= 2.9.2",
@@ -992,6 +1034,10 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "AwesomeAssertions": {
+            "target": "Package",
+            "version": "[9.2.1, )"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[17.11.1, )"

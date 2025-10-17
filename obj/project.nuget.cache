@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "q5PEi5tBrnc=",
+  "dgSpecHash": "+letqhvqIfM=",
   "success": true,
   "projectFilePath": "C:\\Users\\sanan\\Downloads\\TDD\\Katas\\StringCalculator\\StringCalculator.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\sanan\\.nuget\\packages\\awesomeassertions\\9.2.1\\awesomeassertions.9.2.1.nupkg.sha512",
     "C:\\Users\\sanan\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
     "C:\\Users\\sanan\\.nuget\\packages\\microsoft.codecoverage\\17.11.1\\microsoft.codecoverage.17.11.1.nupkg.sha512",
     "C:\\Users\\sanan\\.nuget\\packages\\microsoft.net.test.sdk\\17.11.1\\microsoft.net.test.sdk.17.11.1.nupkg.sha512",
