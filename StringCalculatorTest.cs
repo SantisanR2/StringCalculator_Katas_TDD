@@ -18,6 +18,20 @@ public class StringCalculatorTest
 
     }
 
+    [Fact]
+    public void test()
+    {
+        //Arrange
+        var operation = "2+6";
+        
+        //Act
+        var result = calculate(operation);
+        
+        //Assert
+        result.Should().Be(8);
+        
+    }
+
     private int calculate(string operation)
     {
         return 5;
