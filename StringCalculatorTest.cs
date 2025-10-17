@@ -36,6 +36,6 @@ public class StringCalculatorTest
 
     private int calculate(string operation)
     {
-        return operation == "2+6" ? 8 : 5;
+        return operation == "2+6" ? 8 : int.Parse(operation);
     }
 }
