@@ -4,17 +4,19 @@ namespace StringCalculator;
 
 public class StringCalculatorTest
 {
-    [Fact]
-    public void Debe_Dar_El_Mismo_Numero_Si_Solo_Se_Manda_Uno()
+    [Theory]
+    [InlineData("1")]
+    [InlineData("3")]
+    [InlineData("5")]
+    public void Debe_Dar_El_Mismo_Numero_Si_Solo_Se_Manda_Uno(string stringInteger)
     {
         //Arrange
-        var stringInteger = "5";
 
         //Act
         var result = calculate(stringInteger);
 
         //Assert
-        result.Should().Be(5);
+        result.Should().Be(int.Parse(stringInteger));
 
     }
 
