@@ -38,6 +38,8 @@ public class StringCalculatorTest
 
     private int Calculate(string operation)
     {
-        return operation == "2+6" ? 8 : int.Parse(operation);
+        if (operation.Contains("+"))
+            return int.Parse(operation.Split("+")[0]) + int.Parse(operation.Split("+")[1]);
+        return int.Parse(operation);
     }
 }
