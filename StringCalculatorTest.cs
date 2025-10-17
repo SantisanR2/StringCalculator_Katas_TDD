@@ -48,6 +48,19 @@ public class StringCalculatorTest
         //Assert
         result.Should().Be(35);
     }
+    
+    [Fact]
+    public void test()
+    {
+        //Arrange
+        var operation = " 5 0+ 35";
+        
+        //Act
+        var result = Calculate(operation);
+        
+        //Assert
+        result.Should().Be(85);
+    }
 
     private int Calculate(string operation)
     {
