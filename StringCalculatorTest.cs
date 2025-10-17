@@ -84,19 +84,10 @@ public class StringCalculatorTest
     private int Calculate(string operation)
     {
         operation = operation.Replace(" ", "");
-
-        for (int i = 1; i < operation.Length; i++)
-        {
-            if (operation[i] == '+')
-            {
-                return int.Parse(operation.Substring(0, i)) + int.Parse(operation.Substring(i + 1));
-            }
-            if (operation[i] == '-')
-            {
-                return int.Parse(operation.Substring(0, i)) - int.Parse(operation.Substring(i + 1));
-            }
-        }
-
+        for (var i = 1; i < operation.Length; i++)
+            if (operation[i] is '+' or '-')
+                return int.Parse(operation[..i]) + int.Parse(operation[(i + 1)..]) * (operation[i] == '+' ? 1 : -1);
         return int.Parse(operation);
     }
+    
 }
