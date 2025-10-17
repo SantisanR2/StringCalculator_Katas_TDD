@@ -5,7 +5,7 @@ namespace StringCalculator;
 public class StringCalculatorTest
 {
     [Fact]
-    public void Test1()
+    public void Debe_Dar_El_Mismo_Numero_Si_Solo_Se_Manda_Uno()
     {
         //Arrange
         var stringInteger = "5";
@@ -18,7 +18,7 @@ public class StringCalculatorTest
 
     }
 
-    private int calculate(string stringInteger)
+    private int calculate(string operation)
     {
         return 5;
     }
