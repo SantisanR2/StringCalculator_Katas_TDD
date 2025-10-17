@@ -65,6 +65,22 @@ public class StringCalculatorTest
         result.Should().Be(85);
     }
 
+    [Theory]
+    [InlineData("50-25", 25)]
+    [InlineData("-15+6", -9)]
+    [InlineData("200-150", 50)]
+    [InlineData("-200-150", -350)]
+    public void Debe_Calcular_Correctamente(string operation, int expectedResult)
+    {
+        //Arrange
+        
+        //Act
+        var  result = Calculate(operation);
+        
+        //Assert
+        result.Should().Be(expectedResult);
+    }
+
     private int Calculate(string operation)
     {
         operation = operation.Replace(" ", "");
