@@ -36,9 +36,22 @@ public class StringCalculatorTest
         
     }
 
+    [Fact]
+    public void test()
+    {
+        //Arrange
+        var operation = "60-25";
+
+        //Act
+        var result = Calculate(operation);
+        
+        //Assert
+        result.Should().Be(35);
+    }
+
     private int Calculate(string operation)
     {
-        if (operation.Contains("+"))
+        if (operation.Contains('+'))
             return int.Parse(operation.Split("+")[0]) + int.Parse(operation.Split("+")[1]);
         return int.Parse(operation);
     }
