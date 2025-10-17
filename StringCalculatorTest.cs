@@ -36,17 +36,20 @@ public class StringCalculatorTest
         
     }
 
-    [Fact]
-    public void Debe_Restar_Si_Dos_Enteros_Separados_Por_Menos()
+    [Theory]
+    [InlineData("8-6", 2)]
+    [InlineData("60-25", 35)]
+    [InlineData("300-60", 240)]
+    [InlineData("84-62", 22)]
+    public void Debe_Restar_Si_Dos_Enteros_Separados_Por_Menos(string operation, int expectedResult)
     {
         //Arrange
-        var operation = "60-25";
 
         //Act
         var result = Calculate(operation);
         
         //Assert
-        result.Should().Be(35);
+        result.Should().Be(expectedResult);
     }
     
     [Fact]
