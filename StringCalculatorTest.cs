@@ -64,6 +64,7 @@ public class StringCalculatorTest
 
     private int Calculate(string operation)
     {
+        operation = operation.Replace(" ", "");
         if (operation.Contains('+'))
             return int.Parse(operation.Split("+")[0]) + int.Parse(operation.Split("+")[1]);
         return operation.Contains('-') ? 35 : int.Parse(operation);
