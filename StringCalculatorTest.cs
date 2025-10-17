@@ -13,7 +13,7 @@ public class StringCalculatorTest
         //Arrange
 
         //Act
-        var result = calculate(stringInteger);
+        var result = Calculate(stringInteger);
 
         //Assert
         result.Should().Be(int.Parse(stringInteger));
@@ -21,20 +21,20 @@ public class StringCalculatorTest
     }
 
     [Fact]
-    public void Debe_Sumar_Si_Dos_Enteros_Separados_Por_()
+    public void Debe_Sumar_Si_Dos_Enteros_Separados_Por_Mas()
     {
         //Arrange
         var operation = "2+6";
         
         //Act
-        var result = calculate(operation);
+        var result = Calculate(operation);
         
         //Assert
         result.Should().Be(8);
         
     }
 
-    private int calculate(string operation)
+    private int Calculate(string operation)
     {
         return operation == "2+6" ? 8 : int.Parse(operation);
     }
