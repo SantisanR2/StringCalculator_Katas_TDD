@@ -20,17 +20,19 @@ public class StringCalculatorTest
 
     }
 
-    [Fact]
-    public void Debe_Sumar_Si_Dos_Enteros_Separados_Por_Mas()
+    [Theory]
+    [InlineData("2+6", 8)]
+    [InlineData("3+60", 63)]
+    [InlineData("54+62", 116)]
+    public void Debe_Sumar_Si_Dos_Enteros_Separados_Por_Mas(string operation, int expectedResult)
     {
         //Arrange
-        var operation = "2+6";
         
         //Act
         var result = Calculate(operation);
         
         //Assert
-        result.Should().Be(8);
+        result.Should().Be(expectedResult);
         
     }
 
