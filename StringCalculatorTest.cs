@@ -50,7 +50,7 @@ public class StringCalculatorTest
     }
     
     [Fact]
-    public void test()
+    public void Debe_Ignorarse_Los_Espacios_En_Blanco()
     {
         //Arrange
         var operation = " 5 0+ 35";
