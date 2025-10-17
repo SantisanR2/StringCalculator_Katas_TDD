@@ -19,7 +19,7 @@ public class StringCalculatorTest
     }
 
     [Fact]
-    public void test()
+    public void Debe_Sumar_Si_Dos_Enteros_Separados_Por_()
     {
         //Arrange
         var operation = "2+6";
@@ -34,8 +34,6 @@ public class StringCalculatorTest
 
     private int calculate(string operation)
     {
-        if (operation == "2+6")
-            return 8;
-        return 5;
+        return operation == "2+6" ? 8 : 5;
     }
 }
